@@ -1,5 +1,5 @@
 'use client'
-
+import { useEffect, useState } from 'react'
 import { ThemeProvider } from 'next-themes'
 
 class ProvidersProps {
@@ -7,6 +7,16 @@ class ProvidersProps {
 }
 
 export default function Providers({ children }: ProvidersProps) {
+  const [isMounted, setIsMounted] = useState(false)
+
+  useEffect(() => {
+    setIsMounted(true)
+  }, [])
+
+  if (!isMounted) {
+    return
+  }
+
   return (
     <ThemeProvider attribute="class" defaultTheme="dark">
       {children}

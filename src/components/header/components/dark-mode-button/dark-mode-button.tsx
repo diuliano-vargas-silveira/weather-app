@@ -1,5 +1,5 @@
 'use client'
-import { useEffect, useState } from 'react'
+import { useEffect } from 'react'
 import { useTheme } from 'next-themes'
 import { Moon, Sun } from '@phosphor-icons/react'
 
@@ -11,7 +11,6 @@ enum Themes {
 }
 
 export default function DarkModeButton() {
-  const [isMounted, setIsMounted] = useState(false)
   const { theme, setTheme } = useTheme()
   const isDarkMode = theme === Themes.dark
 
@@ -22,23 +21,22 @@ export default function DarkModeButton() {
       const darkTheme: string = JSON.parse(hasDarkThemeString)
       setTheme(darkTheme)
     }
-    setIsMounted(true)
   }, [])
-
-  if (!isMounted) {
-    return
-  }
 
   function renderIcon() {
     if (isDarkMode) {
-      return <Sun size={DEFAULT_SIZE} />
+      return <Sun className="text-gray-200" size={DEFAULT_SIZE} />
     }
-    return <Moon size={DEFAULT_SIZE} />
+    return <Moon className="text-gray-800" size={DEFAULT_SIZE} />
   }
 
   function handleChangeDarkTheme() {
     setTheme(isDarkMode ? Themes.light : Themes.dark)
   }
 
-  return <button onClick={handleChangeDarkTheme}>{renderIcon()}</button>
+  return (
+    <button className="cursor-pointer" onClick={handleChangeDarkTheme}>
+      {renderIcon()}
+    </button>
+  )
 }
