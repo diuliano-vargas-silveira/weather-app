@@ -1,9 +1,10 @@
-import { DarkModeButton, Searchbar } from './components'
+import DarkModeButton from './components/dark-mode-button/dark-mode-button'
+import Searchbar from './components/search-bar/search-bar'
 
-export function Header() {
+export default function Header() {
   return (
     <header className="px-[6%] py-4 w-full flex justify-between align-middle">
-      <h1 className="text-3xl font-cursive font-black text-gray-800">
+      <h1 className="text-3xl font-extra-bold font-black text-gray-800 dark:text-gray-200">
         Weather
       </h1>
       <Searchbar />
