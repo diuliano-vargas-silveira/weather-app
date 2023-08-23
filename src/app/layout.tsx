@@ -1,9 +1,21 @@
-import './globals.css'
+import Header from '@/components/header/header'
 import type { Metadata } from 'next'
 import { Lato } from 'next/font/google'
-import { Header } from '@/components/header/header'
+import { Ubuntu } from 'next/font/google'
+import Providers from './providers'
 
-const lato = Lato({ subsets: ['latin'], weight: ['900'] })
+import './globals.css'
+
+const lato = Lato({
+  subsets: ['latin'],
+  weight: ['900'],
+  variable: '--font-lato'
+})
+const ubuntu = Ubuntu({
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '700'],
+  variable: '--font-ubuntu'
+})
 
 export const metadata: Metadata = {
   title: 'Weather',
@@ -17,9 +29,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-br">
-      <body className={lato.className}>
-        <Header />
-        {children}
+      <body
+        className={`${ubuntu.variable} font-sans ${lato.variable} font-extrabold`}
+      >
+        <Providers>
+          <Header />
+          {children}
+        </Providers>
       </body>
     </html>
   )

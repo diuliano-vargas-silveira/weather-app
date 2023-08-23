@@ -1,7 +1,7 @@
 'use client'
 import { FormEvent } from 'react'
 
-export function Searchbar() {
+export default function Searchbar() {
   function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault()
   }
