@@ -29,6 +29,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-br">
+      <head>
+        <link href="/sun.icon.svg" rel="shortcut icon" type="image/x-icon" />
+      </head>
       <body
         className={`${ubuntu.variable} font-sans ${lato.variable} font-extrabold`}
       >
