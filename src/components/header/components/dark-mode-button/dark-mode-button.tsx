@@ -35,7 +35,10 @@ export default function DarkModeButton() {
   }
 
   return (
-    <button className="cursor-pointer" onClick={handleChangeDarkTheme}>
+    <button
+      className="cursor-pointer ml-[100px]"
+      onClick={handleChangeDarkTheme}
+    >
       {renderIcon()}
     </button>
   )

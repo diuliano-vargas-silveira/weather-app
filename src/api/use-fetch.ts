@@ -1,6 +1,6 @@
 import { MObject, objectToStringParams } from '@/utils'
 
-const DEFAULT_PARAMS = '&aqi=no&lang=pt'
+const DEFAULT_PARAMS = '&days=1&aqi=no&lang=pt'
 
 export function useFetch() {
   async function get(requestUrl: string, params: MObject): Promise<MObject> {
@@ -16,7 +16,7 @@ export function useFetch() {
     })
 
     if (!response.ok) {
-      return { error: response.text }
+      return { error: 'Nenhuma cidade encontrada com esse nome' }
     }
 
     const data: MObject = await response.json()

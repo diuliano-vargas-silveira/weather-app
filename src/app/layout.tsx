@@ -33,7 +33,7 @@ export default function RootLayout({
         <link href="/sun.icon.svg" rel="shortcut icon" type="image/x-icon" />
       </head>
       <body
-        className={`${ubuntu.variable} font-sans ${lato.variable} font-extrabold`}
+        className={`${ubuntu.variable} font-sans ${lato.variable} font-extrabold h-[100vh]`}
       >
         <Providers>
           <Header />

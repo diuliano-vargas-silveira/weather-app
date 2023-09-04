@@ -5,7 +5,7 @@ import { MObject } from '@/utils'
 export async function GET(params: MObject): Promise<MObject> {
   const { get } = useFetch()
 
-  const response = await get('current.json', params)
+  const response = await get('forecast.json', params)
 
   return response
 }
