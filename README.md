@@ -1,34 +1,86 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Weather App
 
-## Getting Started
+## Overview
 
-First, run the development server:
+The Weather App is a web application that allows users to check the weather in any city of their choice. It is built using React.js, TypeScript, and Next.js, and it utilizes a Weather API to provide up-to-date weather information.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+### Any city founded
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+![Any city founded](image.png)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### City searched
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+![City founded](image-1.png)
 
-## Learn More
+### Any city founded
 
-To learn more about Next.js, take a look at the following resources:
+![This city doesn't exist](image-2.png)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Technology
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Here are the technologies used in this project.
 
-## Deploy on Vercel
+- React.js
+- TypeScript
+- Next.js
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Features
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- **City Search:** Users can enter the name of a city or location to get the current weather conditions.
+
+## Installation
+
+To run the Weather App locally follow these steps:
+
+1. Clone this repository to your local machine.
+
+   ```bash
+   git clone https://github.com/diuliano-vargas-silveira/weather-app
+   ```
+
+2. Navigate to the project directory.
+
+   ```bash
+   cd weather-app
+   ```
+
+3. Install dependencies using npm
+
+   ```bash
+   npm install
+   ```
+
+4. Set up the Weather API credentials. You may need to obtain an API key from a Weather API provider and url.
+
+- Create a .env.local file in the project root.
+
+  ```env
+    API_KEY=your-api-key
+    DEFAULT_API_URL=http://api.weatherapi.com/v1/
+  ```
+
+## Usage
+
+1. On the homepage, you will see a search bar.
+
+2. Enter the name of the city or location for which you want to check the weather.
+
+3. Press the "Search" button or hit Enter.
+
+4. The app will fetch and display the current weather conditions for the specified location.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Acknowledgments
+
+- The Weather App was built using various open-source libraries and resources. We would like to thank the open-source community for their contributions.
+
+- Weather data is provided by [Weather API](https://www.weatherapi.com/).
+
+## Contact
+
+If you have any questions or feedback, please feel free to contact us at [diulianovargas@gmail.com](diulianovargas@gmail.com).
+
+Happy weather checking!
