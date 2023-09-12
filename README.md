@@ -69,10 +69,6 @@ To run the Weather App locally follow these steps:
 
 4. The app will fetch and display the current weather conditions for the specified location.
 
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
 ## Acknowledgments
 
 - The Weather App was built using various open-source libraries and resources. We would like to thank the open-source community for their contributions.
